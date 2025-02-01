@@ -4,16 +4,24 @@
   "description": "",
   "main": "server/server.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "npm run client:build && npm run server",
+    "start:dev": "concurrently \"npm run server:dev\" \"wait-on tcp:3001 && npm run client:dev\"",
+    "server": "cd server && npm start",
+    "server:dev": "cd server && npm run dev",
+    "client:build": "cd client && npm run build",
+    "client:dev": "cd client && npm run dev",    
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "build": "concurrently \"cd server && npm run build\" \"cd client && npm run build\"",
-    "render-build": "npm install && npm run build"
+    "seed": "cd server && npm run seed",
+    "render-build": "npm install && npm run build",
+    "dev": "vite"    
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/dotenv": "^6.1.1",
     "@types/node": "^22.13.0",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
