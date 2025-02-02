@@ -42,7 +42,7 @@ interface AddUserArgs {
     title: string;        
     description: string;
     }
-  }
+  }  
   
   const resolvers = {
     Query: {
@@ -52,10 +52,10 @@ interface AddUserArgs {
       user: async (_parent: any, { username }: UserArgs) => {
         return User.findOne({ username }).populate('book');
       },
-      thoughts: async () => {
+      books: async () => {
         return await Book.find().sort({ createdAt: -1 });
       },
-      thought: async (_parent: any, { bookId }: BookArgs) => {
+      Book: async (_parent: any, { bookId }: BookArgs) => {
         return await Book.findOne({ _id: bookId });
       },
       // Query to get the authenticated user's information
