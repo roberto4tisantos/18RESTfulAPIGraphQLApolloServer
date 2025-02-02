@@ -58,6 +58,7 @@ const typeDefs = gql`
     me: User
     users: [User]  # Add this line if you need the users query
     user(username: String!): User  # Add this line if needed to fetch a single user
+    books: [Book] 
   }   
 
   type Mutation {
