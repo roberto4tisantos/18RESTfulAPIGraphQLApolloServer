@@ -10,7 +10,7 @@ import { expressMiddleware } from '@apollo/server/express4';
 
 // Import the two parts of a GraphQL schema
 import { typeDefs, resolvers } from './schemas/index.js';
-import { authenticateToken } from '../src/utils/auth.js';
+import { authenticateToken } from './utils/auth.js';
 
 const server = new ApolloServer({
   typeDefs,
