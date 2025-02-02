@@ -28,14 +28,14 @@ interface AddUserArgs {
     username: string;
   }
   
-  interface BookArgs {
-    bookId: string;
+  // interface BookArgs {
+  //   bookId: string;
     // title: string;
     // authors: string[];
     // description: string;
     // image: string;
     // link: string;
-  }
+  // }
   
   interface AddBookArgs {
     input:{
@@ -55,9 +55,11 @@ interface AddUserArgs {
       books: async () => {
         return await Book.find().sort({ createdAt: -1 });
       },
-      Book: async (_parent: any, { bookId }: BookArgs) => {
-        return await Book.findOne({ _id: bookId });
-      },
+
+      // Book: async (_parent: any, { bookId }: BookArgs) => {
+      //   return await Book.findOne({ _id: bookId });
+      // },
+
       // Query to get the authenticated user's information
       // The 'me' query relies on the context to check if the user is authenticated
       me: async (_parent: any, _args: any, context: any) => {

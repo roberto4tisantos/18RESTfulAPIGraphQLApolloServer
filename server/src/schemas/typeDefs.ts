@@ -56,8 +56,8 @@ const typeDefs = gql`
 
   type Query {
     me: User
-    users: [User]  # Add this line if you need the users query
-    user(username: String!): User  # Add this line if needed to fetch a single user
+    users: [User]
+    user(username: String!): User  
     books: [Book] 
   }   
 
@@ -66,6 +66,7 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     saveBook(bookData: BookInput!): User
     removeBook(bookId: ID!): User
+    addBook(input: BookInput!): Book
   }
 `;  
 
