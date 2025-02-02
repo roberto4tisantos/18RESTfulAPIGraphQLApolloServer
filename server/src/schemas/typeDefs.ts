@@ -11,12 +11,14 @@
 //   }
 // `;
 
-const typeDefs = `
+import { gql } from "apollo-server";
+
+const typeDefs = gql`
   type User {
-    _id: ID
-    username: String
-    email: String
-    password: String
+    _id: ID!
+    username: String!
+    email: String!
+    password: String!
     savedBooks: [Book]!
     bookCount: Int
   }
@@ -32,7 +34,7 @@ const typeDefs = `
   } 
 
   type Auth {
-  token: String
+  token: ID
   user: User
   }
   
@@ -57,12 +59,9 @@ const typeDefs = `
   }  
 
   type Query {
-    users: [User]
-    user(username: String!): User
-    book: [Book]!
-    book(bookId: ID!): Book
     me: User
-  }  
+    users: [User]  # Add this line if you need the users query
+  }   
 
   type Mutation {
     login(email: String!, password: String!): Auth

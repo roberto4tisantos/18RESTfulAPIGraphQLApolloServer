@@ -19,7 +19,7 @@ const server = new ApolloServer({
 const startApolloServer = async () => {
 
   await server.start();
-  await db();
+  // await db.connect();
 
   const app = express();
   const PORT = process.env.PORT || 3001;
