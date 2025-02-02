@@ -116,7 +116,8 @@ import { useState } from 'react';
 import type { ChangeEvent, FormEvent } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../graphql/mutations';  // Import the ADD_USER mutation
+// import { ADD_USER } from '../graphql/mutations';  // Import the ADD_USER mutation
+import { ADD_USER } from '../utils/mutations';  // Import the ADD_USER mutation
 import Auth from '../utils/auth';
 import type { User } from '../models/User';
 

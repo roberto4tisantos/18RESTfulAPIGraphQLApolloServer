@@ -167,7 +167,8 @@ import type { Book } from "../models/Book";
 import type { GoogleAPIBook } from "../models/GoogleAPIBook";
 
 import { useMutation } from "@apollo/client";
-import { SAVE_BOOK } from "../graphql/mutations"; // Import GraphQL mutation
+import { SAVE_BOOK } from '../utils/mutations';
+// import { SAVE_BOOK } from "../graphql/mutations"; // Import GraphQL mutation
 
 const SearchBooks = () => {
   // create state for holding returned google api data

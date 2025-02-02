@@ -100,7 +100,8 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import Auth from '../utils/auth';
 import type { User } from '../models/User';
 import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../graphql/mutations';  // Import LOGIN_USER mutation
+// import { LOGIN_USER } from '../graphql/mutations';  // Import LOGIN_USER mutation
+import { LOGIN_USER } from '../utils/mutations';  // Import LOGIN_USER mutation
 
 const LoginForm = ({ handleModalClose }: { handleModalClose: () => void }) => {
   const [userFormData, setUserFormData] = useState<User>({
