@@ -64,6 +64,7 @@ interface AddUserArgs {
         // If the user is authenticated, find and return the user's information along with their thoughts
         if (context.user) {
           return User.findOne({ _id: context.user._id }).populate('book');
+          return context.user;          
         }
         // If the user is not authenticated, throw an AuthenticationError
         throw new AuthenticationError('Could not authenticate user.');

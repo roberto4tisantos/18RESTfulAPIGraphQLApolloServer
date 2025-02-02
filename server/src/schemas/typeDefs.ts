@@ -35,9 +35,9 @@ const typeDefs = gql`
   } 
 
   type Auth {
-  token: ID
-  user: User
-  }
+    token: ID!
+    user: User
+  }     
   
   input UserInput {
     username: String!
@@ -53,15 +53,11 @@ const typeDefs = gql`
     link: String
     bookId: String!
   }  
-  
-  type Auth {
-    token: ID!
-    user: User
-  }  
 
   type Query {
     me: User
     users: [User]  # Add this line if you need the users query
+    user(username: String!): User  # Add this line if needed to fetch a single user
   }   
 
   type Mutation {
