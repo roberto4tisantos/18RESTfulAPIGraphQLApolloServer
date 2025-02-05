@@ -24,11 +24,13 @@ RESTful API GraphQL Apollo Server
 ![image](https://github.com/user-attachments/assets/6dd107d0-cea1-4110-a28f-46e98841c4d0)
 
 # HEROKU LIVE URL APP 
-https://api-google-graphql-apollo-60cd1727672d.herokuapp.com/
+**https://api-google-graphql-apollo-60cd1727672d.herokuapp.com/**
+
 ![image](https://github.com/user-attachments/assets/c258c563-369a-4251-8b3f-1496f08f0368)
 
 # GIT HUB URL
-https://api-google-graphql-apollo-60cd1727672d.herokuapp.com/
+**https://github.com/roberto4tisantos/18RESTfulAPIGraphQLApolloServer**
+
 ![image](https://github.com/user-attachments/assets/8a859f1e-45e3-465a-bc7c-82c8a18b7720)
 
 
