@@ -32,13 +32,13 @@ export default defineConfig({
       '/api': {
         target: 'http://localhost:3001',
         secure: false,
-        changeOrigin: true
+        changeOrigin: true,
         // onError: (err, req, res) => {
         //   console.error('Error with proxy request:', err)
         //   res.statusCode = 502 // Bad Gateway
         //   res.end('Proxy server is unavailable.')
         // }        
-      }
-    }
-  }
-})
+      },
+    },
+  },
+});
